@@ -1,0 +1,13 @@
+!/bin/bash
+
+### Basic example for listing the resource in AWS.
+
+set -x # debug mode
+# listing aws lamda 
+aws lamda list-functions >> resourcetracker
+
+#listing s3 buckets
+aws s3 ls >> resourcetracker
+
+#listing IAM user
+aws iam list-users
